@@ -6,9 +6,8 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("<int:post_id>/", views.detail, name="detail")
+    path("<int:post_id>/", views.detail, name="detail"),
 ]
 
 if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
-                              document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
